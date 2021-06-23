@@ -124,11 +124,10 @@ class LibraryScopedNameFinder {
     if (type is ParameterizedType && type.typeArguments.isNotEmpty) {
       final typeArgNames = SurroundedCommaList(
           '<', '>', type.typeArguments.map(_getDartTypeName).toList());
-      return '${namesByElement[typeElement]}$typeArgNames${_nullabilitySuffixToString(type.nullabilitySuffix)}';
+      return '${namesByElement[typeElement]}$typeArgNames';
     }
 
-    return namesByElement[typeElement]! +
-        _nullabilitySuffixToString(type.nullabilitySuffix);
+    return namesByElement[typeElement]!;
   }
 
   String _nullabilitySuffixToString(NullabilitySuffix nullabilitySuffix) =>

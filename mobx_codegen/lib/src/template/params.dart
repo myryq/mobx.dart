@@ -15,7 +15,7 @@ class ParamTemplate {
 
   NamedArgTemplate get asNamedArgument => NamedArgTemplate(name: name);
 
-  String get metadata => hasRequiredKeyword ? 'required ' : '';
+  String get metadata => hasRequiredKeyword ? '@required ' : '';
 
   @override
   String toString() => defaultValue == null

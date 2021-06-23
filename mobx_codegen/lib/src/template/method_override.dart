@@ -17,7 +17,7 @@ class MethodOverrideTemplate {
         name: element.name,
         type: typeNameFinder.findParameterTypeName(element),
         defaultValue: element.defaultValueCode,
-        hasRequiredKeyword: element.isRequiredNamed);
+        hasRequiredKeyword: element.hasRequired);
 
     final positionalParams = method.parameters
         .where((param) => param.isPositional && !param.isOptionalPositional)
